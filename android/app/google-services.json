@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "444762270326",
+    "project_id": "pindap-app",
+    "storage_bucket": "pindap-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444762270326:android:e2a2feab754019cbf74d57",
+        "android_client_info": {
+          "package_name": "com.daffa.pindap_todolist"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444762270326-6cjgshk7bnpp1uo2kqdsisvrog18ant3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.daffa.pindap_todolist",
+            "certificate_hash": "872d331cb2665270a70049c6820d69af88ad0545"
+          }
+        },
+        {
+          "client_id": "444762270326-gjv9cq7idrrsnqgi05dlog76av46uhua.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMsNeUuRT-_S-KMkSFzZl52oh_WHSSm1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444762270326-gjv9cq7idrrsnqgi05dlog76av46uhua.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

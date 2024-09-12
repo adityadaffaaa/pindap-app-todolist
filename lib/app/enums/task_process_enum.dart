@@ -1,0 +1,1 @@
+enum TaskProcessEnum { ADD, EDIT }
