@@ -3,6 +3,8 @@ import 'package:intl/intl.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:logger/logger.dart';
 import 'package:pindap_todolist/app/data/models/response/user_data_response.dart';
+import 'package:pindap_todolist/app/enums/auth_input_enum.dart';
+import 'package:pindap_todolist/app/enums/auth_field_enum.dart';
 import 'package:pindap_todolist/utils/type.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -75,5 +77,45 @@ class AppExtensions {
     DateTime now = DateTime.now();
     String formattedDate = DateFormat('dd-MM-yyyy').format(now);
     return formattedDate;
+  }
+
+  static Future<bool> setTemporaryDataAuth(
+    final String data, {
+    required final AuthInputEnum type,
+    required final AuthFieldEnum fieldType,
+  }) async {
+    Logger().i(data);
+
+    SharedPreferences pref = await SharedPreferences.getInstance();
+    final bool result = await pref.setString(
+      '${type.value}-${fieldType.value}',
+      data,
+    );
+    Logger().i(result);
+    return result;
+  }
+
+  static Future<String?> getTemporaryDataAuth({
+    required final AuthInputEnum type,
+    required final AuthFieldEnum fieldType,
+  }) async {
+    Logger().i(
+      '${type.value}-${fieldType.value}',
+    );
+    try {
+      SharedPreferences pref = await SharedPreferences.getInstance();
+      final String? result = pref.getString(
+        '${type.value}-${fieldType.value}',
+      );
+
+      Logger().i(result);
+
+      if (result == null) return null;
+
+      return result;
+    } catch (e) {
+      Logger().e('Get temporary auth data from local storage error: $e');
+      throw Exception('Get temporary auth data from local storage error: $e');
+    }
   }
 }

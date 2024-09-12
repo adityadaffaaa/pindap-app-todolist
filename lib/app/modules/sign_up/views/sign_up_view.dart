@@ -37,20 +37,6 @@ class SignUpView extends GetView<SignUpController> {
                       const SizedBox(
                         height: Constants.baseGapPerSection,
                       ),
-                      // AuthTextfield.normal(
-                      //   hintText: 'Name',
-                      //   mainTec: controller.nameTec,
-                      // ),
-                      // const SizedBox(
-                      //   height: Constants.baseGap,
-                      // ),
-                      // AuthTextfield.normal(
-                      //   hintText: 'Username',
-                      //   mainTec: controller.userNameTec,
-                      // ),
-                      const SizedBox(
-                        height: Constants.baseGap,
-                      ),
                       AuthTextfield.normal(
                         hintText: 'Email',
                         mainTec: controller.emailTec,
